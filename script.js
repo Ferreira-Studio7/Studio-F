@@ -3,8 +3,6 @@ const categoriasEl=document.getElementById('categorias');
 const itensCarrinho=document.getElementById('itensCarrinho');
 const totalEl=document.getElementById('total');
 const btnWhats=document.getElementById('btnWhats');
-const btnPix=document.getElementById('btnPix');
-const pixInfo=document.getElementById('pixInfo');
 let carrinho=[];
 
 function moeda(v){return 'R$ '+v.toFixed(2).replace('.',',');}
@@ -44,11 +42,6 @@ function atualizarCarrinho(){
  const msg=encodeURIComponent('Olá! Gostaria de finalizar o pedido:%0A'+carrinho.map(p=>`- ${p.nome} (${moeda(p.preco)})`).join('%0A')+`%0ATotal: ${moeda(total)}`);
  btnWhats.href=`https://wa.me/${whatsapp}?text=${msg}`;
 }
-
-btnPix.onclick=()=>{
- pixInfo.textContent='Chave Pix: '+chavePix;
- navigator.clipboard?.writeText(chavePix);
-};
 
 renderCategorias();
 renderProdutos();
