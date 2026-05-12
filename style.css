@@ -58,13 +58,17 @@ body{margin:0;font-family:Arial,sans-serif;background:var(--fundo)}
   border-radius:8px;
   cursor:pointer;
   transition:transform 0.2s;
+  font-size:1rem;
+  font-weight:bold;
 }
 
 .btn:hover{
   transform:scale(1.05);
 }
 
-.insta{background:#E1306C}
+.insta{
+  background:#E1306C;
+}
 
 .categorias{
   display:flex;
@@ -80,6 +84,11 @@ body{margin:0;font-family:Arial,sans-serif;background:var(--fundo)}
   border-radius:20px;
   background:var(--rosa);
   cursor:pointer;
+  transition:background 0.2s;
+}
+
+.categorias button:hover{
+  background:#f08aae;
 }
 
 .catalogo{
@@ -121,15 +130,23 @@ body{margin:0;font-family:Arial,sans-serif;background:var(--fundo)}
   padding:20px;
 }
 
+.carrinho h2{
+  margin-top:0;
+  color:var(--azul);
+}
+
 .item-carrinho{
   display:flex;
   justify-content:space-between;
-  padding:4px 0;
+  padding:8px 0;
+  border-bottom:1px solid #eee;
 }
 
 .total{
   font-size:1.2rem;
   font-weight:bold;
+  color:var(--azul);
+  margin:15px 0;
 }
 
 footer{
@@ -156,5 +173,10 @@ footer{
   .logo{
     width:70px;
     height:70px;
+  }
+  
+  .carrinho{
+    margin:20px auto;
+    width:95%;
   }
 }
